@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/articleFragment"
+        android:name="com.example.newnewsapp.ui.Fragments.ArticleFragment"
+        android:label="fragment_article"
+        tools:layout="@layout/fragment_article">
+        <argument
+            android:name="article"
+            app:argType="com.example.newnewsapp.models.Article"/>
+    </fragment>
+    <fragment
+        android:id="@+id/headlinesFragment"
+        android:name="com.example.newnewsapp.ui.Fragments.HeadlinesFragment"
+        android:label="fragment_headlines"
+        tools:layout="@layout/fragment_headlines" >
+        <action
+            android:id="@+id/action_headlinesFragment_to_articleFragment"
+            app:destination="@id/articleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.newnewsapp.ui.Fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_technologyFragment"
+            app:destination="@id/technologyFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_sportFragment"
+            app:destination="@id/sportFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_scienceFragment"
+            app:destination="@id/scienceFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_healthFragment"
+            app:destination="@id/healthFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_entertainmentFragment"
+            app:destination="@id/entertainmentFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_businessFragment"
+            app:destination="@id/businessFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/savedFragment"
+        android:name="com.example.newnewsapp.ui.Fragments.SavedFragment"
+        android:label="fragment_saved"
+        tools:layout="@layout/fragment_saved" >
+        <action
+            android:id="@+id/action_savedFragment_to_articleFragment"
+            app:destination="@id/articleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.newnewsapp.ui.Fragments.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_searchFragment_to_articleFragment"
+            app:destination="@id/articleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/businessFragment"
+        android:name="com.example.newnewsapp.ui.Fragments.CategoryFragments.BusinessFragment"
+        android:label="fragment_business"
+        tools:layout="@layout/fragment_business" >
+        <action
+            android:id="@+id/action_businessFragment_to_articleFragment"
+            app:destination="@id/articleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/entertainmentFragment"
+        android:name="com.example.newnewsapp.ui.Fragments.CategoryFragments.EntertainmentFragment"
+        android:label="fragment_entertainment"
+        tools:layout="@layout/fragment_entertainment" >
+        <action
+            android:id="@+id/action_entertainmentFragment_to_articleFragment"
+            app:destination="@id/articleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/healthFragment"
+        android:name="com.example.newnewsapp.ui.Fragments.CategoryFragments.HealthFragment"
+        android:label="fragment_health"
+        tools:layout="@layout/fragment_health" >
+        <action
+            android:id="@+id/action_healthFragment_to_articleFragment"
+            app:destination="@id/articleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/scienceFragment"
+        android:name="com.example.newnewsapp.ui.Fragments.CategoryFragments.ScienceFragment"
+        android:label="fragment_science"
+        tools:layout="@layout/fragment_science" >
+        <action
+            android:id="@+id/action_scienceFragment_to_articleFragment"
+            app:destination="@id/articleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sportFragment"
+        android:name="com.example.newnewsapp.ui.Fragments.CategoryFragments.SportFragment"
+        android:label="fragment_sport"
+        tools:layout="@layout/fragment_sport" >
+        <action
+            android:id="@+id/action_sportFragment_to_articleFragment"
+            app:destination="@id/articleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/technologyFragment"
+        android:name="com.example.newnewsapp.ui.Fragments.CategoryFragments.TechnologyFragment"
+        android:label="fragment_technology"
+        tools:layout="@layout/fragment_technology" >
+        <action
+            android:id="@+id/action_technologyFragment_to_articleFragment"
+            app:destination="@id/articleFragment" />
+    </fragment>
+</navigation>

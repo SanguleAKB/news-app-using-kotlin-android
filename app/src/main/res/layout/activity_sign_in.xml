@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_weight="1"
+    android:background="@color/black"
+    tools:context=".ui.SignInActivity">
+
+    <LinearLayout
+        android:id="@+id/txtMorning"
+        android:layout_width="match_parent"
+        android:layout_height="125dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Spartans !!"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="italic"></TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/linear_bg"
+        android:layout_weight="1">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="55dp">
+            <TextView
+                android:id="@+id/textWelcome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginTop="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="Welcome">
+            </TextView>
+            <TextView
+                android:id="@+id/textDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enter your details below"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textWelcome">
+            </TextView>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tfName"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textDetail"
+                android:layout_margin="20dp"
+                tools:layout_editor_absoluteX="1dp"
+                app:startIconDrawable="@drawable/baseline_account_circle_24"
+                tools:layout_editor_absoluteY="133dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etName"
+                    android:textStyle="bold"
+                    android:layout_width="match_parent"
+                    style="@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Large"
+                    android:layout_height="match_parent"
+                    android:hint="Enter Your name " />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tfEmail"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tfName"
+                android:layout_margin="20dp"
+                tools:layout_editor_absoluteX="1dp"
+                app:startIconDrawable="@drawable/baseline_email_24"
+                tools:layout_editor_absoluteY="133dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="textEmailAddress"
+                    android:textStyle="bold"
+                    android:hint="Enter Your Email " />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tfUserName"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tfEmail"
+                android:layout_margin="22dp"
+                app:startIconDrawable="@drawable/baseline_verified_user_24"
+                tools:layout_editor_absoluteX="1dp"
+                tools:layout_editor_absoluteY="133dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etUsername"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textStyle="bold"
+                    android:hint="Enter Your Username " />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tfPassword"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tfUserName"
+                android:layout_margin="20dp"
+                app:startIconDrawable="@drawable/baseline_lock_24"
+                tools:layout_editor_absoluteX="1dp"
+                app:endIconMode="password_toggle"
+                tools:layout_editor_absoluteY="133dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="textPassword"
+                    android:textStyle="bold"
+                    android:hint="Enter Your Password " />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btnSignUp"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:transitionName="Sign Up"
+                android:text="Sign Up"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/tfPassword"
+                app:layout_constraintStart_toStartOf="parent"
+                android:background="@drawable/button_layout"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="20dp">
+            </Button>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+</LinearLayout>

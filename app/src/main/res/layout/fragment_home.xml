@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.Fragments.HomeFragment"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/viewCardThree"
+            app:cardElevation="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/viewCardFour">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:src="@drawable/health_dash" />
+
+            <TextView
+                android:layout_width="263dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:gravity="center"
+                android:text="Health"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="italic" />
+        </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/viewCardFour"
+        app:cardElevation="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewCardThree"
+        app:layout_constraintBottom_toTopOf="@id/viewCardFive">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:src="@drawable/entertainment_dash" />
+
+        <TextView
+            android:layout_width="263dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:gravity="center"
+            android:text="Entertainment"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="italic" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/viewCardFive"
+        app:cardElevation="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewCardFour"
+        app:layout_constraintBottom_toTopOf="@id/viewCardSix">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:src="@drawable/sport_dash" />
+
+        <TextView
+            android:layout_width="263dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:gravity="center"
+            android:text="Sports"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="italic" />
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/viewCardSix"
+        app:cardElevation="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewCardFive"
+        app:layout_constraintBottom_toTopOf="@id/viewCardSeven">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:src="@drawable/education_dash" />
+
+        <TextView
+            android:layout_width="263dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:gravity="center"
+            android:text="Science"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="italic" />
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/viewCardSeven"
+        app:cardElevation="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewCardSix"
+        app:layout_constraintBottom_toTopOf="@id/viewCardEight">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:src="@drawable/business_dash" />
+
+        <TextView
+            android:layout_width="263dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:gravity="center"
+            android:text="Business"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="italic" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/viewCardEight"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        app:cardElevation="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewCardSeven">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:src="@drawable/technology_dash" />
+
+        <TextView
+            android:layout_width="263dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:gravity="center"
+            android:text="Technology"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="italic" />
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
